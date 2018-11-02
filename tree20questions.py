@@ -92,9 +92,14 @@ def play_game(tree):
         print()
         ans_old = ans_new = None
         while ans_old == ans_new:
-            new_question = next(questions)
-            while guess.already_asked(new_question): #see if question is already in ancestry of guess node
+            try:
                 new_question = next(questions)
+                while guess.already_asked(new_question): #see if question is already in ancestry of guess node
+                    new_question = next(questions)
+            except:
+                new_question = nonempty_input(
+                    f"We are out of questions! Please enter a question where the answers are DIFFERENT for {new_name.upper()} and {old_name.upper()}"
+                )
             ans_new = ask(f"Answer for {new_name.upper()}: {new_question}")
             ans_old = ask(f"Answer for {old_name.upper()}: {new_question}")
         guess.label = new_question #Update node label to question       
