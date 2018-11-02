@@ -3,6 +3,7 @@
 #Cons: Tree unbalanced, always asks same questions, not limited to 20, limited to yes/no for accuracy
 import os
 import pickle
+import csv
 
 from QuizHelper import *
 
@@ -66,11 +67,27 @@ class QuizTree:
     def unique_animals(self):
         return list(set([node.label for node in self.leaves()]))
 
-    def data_dump(self):
-        """ Returns all the animals in tree as columns """
-        #first traverse for set of all questions
-        questions = set(self.all_questions())
-        print(questions)
+def data_dump(tree):
+    questions = list(set(tree.all_questions()))
+    rows = [
+        ["animal"] + questions
+    ]
+    for leaf in tree.leaves():
+        row = [leaf.label]
+        answers = [0 for i in questions]
+        child = leaf
+        parent = child.parent
+        while parent is not None:
+            q = parent.label
+            if child is parent.yes:
+                answers[questions.index(q)] = 'yes'
+            else:
+                answers[questions.index(q)] = 'no'
+            child = parent
+            parent = parent.parent
+        row.extend(answers)
+        rows.append(row)
+    return rows
 
 def starter_tree():
     tree = QuizTree("Does it have four legs?", [
@@ -86,6 +103,7 @@ def starter_tree():
     return tree
 
 def play_game(tree):
+    print(data_dump(tree))
     print(len(tree.unique_animals()), "animals")
     questions = yield_questions()
     guess, count = tree.get_answer_node()
