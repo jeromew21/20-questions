@@ -1,0 +1,51 @@
+animal,Is it in the cat family?,Is it often eaten by humans?,Is it a mammal?,Is it often a pet?,Is it stinky?,Is it faster than a human?,Is it a pet?,Does it make a distinctive noise?,Does it eat ants?,Can it kill a human?,Does it swim?,Is it larger than a human?,Is it a carnivore?,Does it have a mane?,Is it considered cute?,Is it often a household pet?,Does it have four legs?,Does it fly?,Does it live on land?,Is it furry?,Is it kept by humans?
+Rabbit,,yes,yes,,,,yes,,,,,,,,,,yes,,yes,,
+Frog,,yes,no,,,,yes,,,,,,,,,,yes,,yes,,
+Dog,,no,,,,,yes,,,,yes,,,,,,yes,,yes,,yes
+Cat,yes,no,,,,,yes,,,,no,,,,,yes,yes,,yes,,yes
+Guinea Pig,no,no,,,,,yes,,,,no,,,,,yes,yes,,yes,,yes
+Mouse,,no,,,,,yes,,,,no,,,,,no,yes,,yes,,yes
+Mouse,,no,,,,,yes,,,,,,,,,,yes,,yes,,no
+Horse,,yes,,,,,no,,,,,yes,,yes,,,yes,,yes,,
+Deer,,yes,,,,,no,,,,,yes,,no,yes,,yes,,yes,,
+Cow,,yes,,,,,no,yes,,,,yes,,no,no,,yes,,yes,,
+Buffalo,,yes,,,,,no,no,,,,yes,,no,no,,yes,,yes,,
+Pegasus,,no,yes,,,,no,,,,,yes,,,,,yes,yes,yes,,
+Tiger,yes,no,yes,,,,no,,,,,yes,,,,,yes,no,yes,,yes
+Horse,no,no,yes,,,,no,,,,,yes,,,,,yes,no,yes,yes,yes
+Elephant,no,no,yes,,,,no,,,,,yes,,,,,yes,no,yes,no,yes
+Hippopotamus,,no,yes,,,,no,,,yes,,yes,,,,,yes,no,yes,,no
+Giraffe,,no,yes,,,,no,,,no,,yes,,,,,yes,no,yes,,no
+Dragon,,no,no,,,,no,,,,,yes,,,,,yes,yes,yes,,
+Komodo dragon,,no,no,,,,no,,,,,yes,,,,,yes,no,yes,,
+Pig,,yes,,,yes,,no,,,,,no,,,yes,,yes,,yes,,
+Goat,,yes,,,no,,no,,,,,no,,,yes,,yes,,yes,,
+Sheep,,no,,,,,no,,,,,no,,,yes,,yes,,yes,,
+Aardvark,,,,,,,no,,yes,,,no,,,no,,yes,,yes,,
+Goat,,yes,,,,,no,,no,,,no,,,no,,yes,,yes,,
+Cheetah,yes,no,,,,,no,,no,,,no,,,no,,yes,,yes,,
+Wolf,no,no,,,,,no,,no,,,no,,,no,,yes,,yes,,
+Otter,,,,,,,,,,,,,,,yes,,yes,,no,,
+Dolphin,,,,,,,,,,,,,,,no,,yes,,no,,
+Dolphin,,,yes,,,yes,,,,,yes,yes,yes,,,,no,,,,
+Gorilla,,,yes,,,yes,,,,,no,yes,yes,,,,no,,,,
+Tyranosaurus rex,,,no,,,yes,,,,,,yes,yes,,,,no,,,,
+Bear,,,,,,no,,,,,,yes,yes,,,,no,,,,
+Bird,,,,yes,,,,,,,,no,yes,,yes,,no,,,,
+Duck,,yes,,no,,,,,,,,no,yes,,yes,,no,yes,,,
+Bat,,no,,no,,,,,,,,no,yes,,yes,,no,yes,,,
+Monkey,,,,no,,,,,,,,no,yes,,yes,,no,no,,,
+Human,,,yes,,,,,,,,,no,yes,,no,,no,,,,
+Snake,,yes,no,,,,,yes,,yes,yes,no,yes,,no,,no,,,,
+Jellyfish,,yes,no,,,,,no,,yes,yes,no,yes,,no,,no,,,,
+Octopus,,yes,no,,,,,,,no,yes,no,yes,,no,,no,,,,
+Scorpion,,yes,no,,,,,,,,no,no,yes,,no,,no,,,,
+Hawk,,no,no,,,,,,,,,no,yes,,no,,no,yes,,,yes
+Eagle,,no,no,,,,,,,,,no,yes,,no,,no,yes,,,no
+Cobra,,no,no,,,,,,,,yes,no,yes,,no,,no,no,,,
+Snake,,no,no,,,,,yes,,,no,no,yes,,no,,no,no,,,
+Spider,,no,no,,,,,no,,,no,no,yes,,no,,no,no,,,
+Bat,,,yes,,,,,,,,,,no,,,,no,yes,,,
+Sloth,,,yes,,,,,,,,,,no,,,,no,no,,,
+Turkey,,yes,no,,,,,,,,,,no,,,,no,,,,
+Koala,,no,no,,,,,,,,,,no,,,,no,,,,

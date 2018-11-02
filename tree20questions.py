@@ -67,14 +67,14 @@ class QuizTree:
     def unique_animals(self):
         return list(set([node.label for node in self.leaves()]))
 
-def data_dump(tree):
+def data_dump(tree, csv_filename="tree20_data.csv"):
     questions = list(set(tree.all_questions()))
     rows = [
         ["animal"] + questions
     ]
     for leaf in tree.leaves():
         row = [leaf.label]
-        answers = [0 for i in questions]
+        answers = ['' for i in questions]
         child = leaf
         parent = child.parent
         while parent is not None:
@@ -87,6 +87,11 @@ def data_dump(tree):
             parent = parent.parent
         row.extend(answers)
         rows.append(row)
+    #TODO: combine rows with same animal for brevity
+    with open(csv_filename, "w") as f:
+        writer = csv.writer(f, delimiter=',')
+        for r in rows:
+            writer.writerow(r)
     return rows
 
 def starter_tree():
@@ -103,7 +108,7 @@ def starter_tree():
     return tree
 
 def play_game(tree):
-    print(data_dump(tree))
+    data_dump(tree)
     print(len(tree.unique_animals()), "animals")
     questions = yield_questions()
     guess, count = tree.get_answer_node()
