@@ -56,6 +56,15 @@ class QuizTree:
         if self.is_leaf:
             return []
         return [self.label] +  self.yes.all_questions() + self.no.all_questions()
+    
+    def leaves(self):
+        if self.is_leaf:
+            return [self]
+        else:
+            return self.yes.leaves() + self.no.leaves()
+    
+    def unique_animals(self):
+        return list(set([node.label for node in self.leaves()]))
 
     def data_dump(self):
         """ Returns all the animals in tree as columns """
@@ -77,6 +86,7 @@ def starter_tree():
     return tree
 
 def play_game(tree):
+    print(len(tree.unique_animals()), "animals")
     questions = yield_questions()
     guess, count = tree.get_answer_node()
     print(f"I guess: {guess.label}.")
@@ -87,7 +97,7 @@ def play_game(tree):
         print(f"Yay! It took me {count} questions.")
         return
     else:
-        new_name = nonempty_input("What is the name of your animal? ").lower().capitalize()
+        new_name = cap_words(nonempty_input("What is the name of your animal? ").lower())
         old_name = guess.label
         print()
         ans_old = ans_new = None
@@ -100,6 +110,8 @@ def play_game(tree):
                 new_question = nonempty_input(
                     f"We are out of questions! Please enter a question where the answers are DIFFERENT for {new_name.upper()} and {old_name.upper()}"
                 )
+                with open("questions.txt", "a") as f:
+                    f.write(new_question + "\n")
             ans_new = ask(f"Answer for {new_name.upper()}: {new_question}")
             ans_old = ask(f"Answer for {old_name.upper()}: {new_question}")
         guess.label = new_question #Update node label to question       
