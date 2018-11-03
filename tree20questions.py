@@ -87,7 +87,24 @@ def data_dump(tree, csv_filename="tree20_data.csv"):
             parent = parent.parent
         row.extend(answers)
         rows.append(row)
-    #TODO: combine rows with same animal for brevity
+    #combine rows with same animal for brevity
+    unique_rows = []
+    unique_animal_names = []
+    for row in rows[1:]:
+        if row[0] not in unique_animal_names:
+            aggregate_row = row[:]
+            for other_row in rows[1:]:
+                if row is not other_row:
+                    if row[0] == other_row[0]:
+                        #found a duplicate
+                        for index, answer in enumerate(row):
+                            if index == 0: 
+                                continue
+                            aggregate_row[index] = combine_answers(answer, other_row[index])
+            unique_rows.append(aggregate_row)
+            unique_animal_names.append(row[0])
+    rows = rows[:1]
+    rows.extend(unique_rows)
     with open(csv_filename, "w") as f:
         writer = csv.writer(f, delimiter=',')
         for r in rows:
