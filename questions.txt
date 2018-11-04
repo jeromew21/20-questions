@@ -10,13 +10,15 @@ Does it have feathers?
 Is it a pest?
 Is it widely considered to be intelligent?
 Can you squish it?
+Does it have a long neck?
 Does it eat ants?
 Does it swim?
 Does it make a distinctive noise?
+Does it spread disease?
 Does it have spots?
 Is it a reptile?
 Is it furry?
-Is in a well-known children's book?
+Is it featured in a well-known children's book?
 Is it faster than a human?
 Is it kept by humans?
 Is it real?
@@ -38,3 +40,4 @@ Can it speak English?
 Are they bred by humans?
 Do humans play games with them?
 Is it often seen in mythology?
+Do they build their own homes?
